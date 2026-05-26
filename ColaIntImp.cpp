@@ -41,12 +41,11 @@ void encolar(ColaInt& c, int e) {
 	}
 	else {
 	
-
+	
 		c->inicio->sig = new NodoLista;
-		c->fin = c->inicio->sig;
+		c->inicio = c->inicio->sig;
 		c->inicio->dato = e;
 		c->inicio->sig = NULL;
-
 		c->largo++;
 	
 
@@ -57,21 +56,43 @@ void encolar(ColaInt& c, int e) {
 
 int principio(ColaInt c) {
 	
-	return c->inicio->dato;
+	return c->fin->dato;
 }
 
 void desencolar(ColaInt& c) {
-	// NO IMPLEMENTADO
+
+
+	
+		 NodoLista* aux = c->fin;
+		 c->fin = c->fin->sig;
+		 c->largo--;
+		 delete aux;
+
+
+		 if (c->fin == NULL)
+		 {
+			 c->inicio = NULL;
+		 }
+
+
+	
 }
 
 bool esVacia(ColaInt c) {
-	// NO IMPLEMENTADO
-	return true;
+
+	if (c->inicio == NULL && c->fin == NULL)
+	{
+		return true;
+	}
+	else {
+	
+		return false;
+	}
 }
 
 unsigned int cantidadElementos(ColaInt c) {
-	// NO IMPLEMENTADO
-	return 0;
+
+	return c->largo;
 }
 
 ColaInt clon(ColaInt c) {
