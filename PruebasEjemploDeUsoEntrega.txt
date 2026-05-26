@@ -1,0 +1,418 @@
+-!-Ini::PRUEBAS PilaInt
+cantidad de elementos al crear la pila: 0
+Esta vacia: 1
+
+-!-0::0-?-?-Imprimo la cantidad de elementos al crear la pila y valido que sea vacia
+tope de la pila cuando agrego el primer elemento: 4
+
+-!-1::0-?-?-Imprimo el tope de la pila con 1 elemento para validar el caso base de push
+Esta vacia: 0
+
+-!-2::0-?-?-Imprimo si esta vacia o llena antes y despues de agregar, verificando que push funcione
+Largo de pila: 5
+
+-!-3::0-?-?-Imprimo largo luego de agregar
+el primer elemento antes del pop es: -1
+el primer elemento luego del pop es: 3
+la cantidad de elementos luego del pop es: 4
+
+-!-4::0-?-?-Imprimo el primer elemento antes y despues del pop, verificando que disminuya la cantidad de elementos
+elementos de la pila: 
+3,2,5,4
+
+-!-5::0-?-?-Clono e imprimo los elementos de la pila clonando y poppeando
+Largo de clon luego de vaciarlo: 0
+Largo de la pila original luego de vaciar clon: 4
+
+-!-6::0-?-?-Verifico que se modifique el clon y no el original
+El tope de la pila clon luego de agregar 3 elementos es: -16
+El tope de la pila clon luego de poppear 2 elementos es: 38
+
+-!-7::0-?-?-Verifico que pushear y poppear elementos no altere la estructura de la pila
+vacio el clon totalmente. Cantidad de elementos: 0
+Es vacia: 1
+
+-!-8::0-?-?-Verifico que funcione el caso base de pop dejando la pila vacia
+cantidad de elementos de la pila original luego de destruir clon: 4tope de la pila original luego de destruir clon3
+-!-9::0-?-?-Verifico que destruir el clon no altere la pila original
+elementos de la pila: 
+3,2,5,4
+elementos del clon de la pila: 
+3,2,5,4
+
+-!-10::0-?-?-Verifico que el clon copie todos los elementos de la pila
+
+-!-11::0-?-?-Libero memoria
+-!-Fin::PRUEBAS PilaInt
+-!-Ini::PRUEBAS ListaPosInt
+Largo de lista Pos: 7
+
+-!-12::0-?-?-Imprimo largo luego de agregar
+5,7,-1,-2,5,4,15
+
+-!-13::0-?-?-Clono e imprimo
+Cantidad de elementos del clon luego de vaciarlo: 0
+Cantidad de elementos de la cola luego de vaciar clon: 7
+
+-!-14::0-?-?-Verifico que se modifique el clon y no el original
+Largo de lista Pos luego de borrar 4 elementos: 3
+Largo de lista Pos luego de vaciarla: 0
+
+-!-15::0-?-?-Borro algunos elementos y vacio la lista
+
+-!-16::0-?-?-Libero memoria
+-!-Fin::PRUEBAS ListaPosInt
+-!-Ini::PRUEBAS ColaInt
+cantidad de elementos al crear la cola: 0
+Esta vacia: 1
+
+-!-17::0-?-?-Imprimo la cantidad de elementos al crear la cola y valido que sea vacia
+Principio de la cola cuando agrego el primer elemento: 4
+
+-!-18::0-?-?-Imprimo el principio de la cola con 1 elemento para validar el caso base de encolar
+Esta vacia: 0
+
+-!-19::0-?-?-Imprimo si esta vacia o llena antes y despues de agregar, verificando que encolar funcione
+Largo de cola: 5
+
+-!-20::0-?-?-Imprimo largo luego de agregar
+el primer elemento antes de desencolar es: 4
+el primer elemento luego de desencolar es: 5
+la cantidad de elementos luego de desencolar es: 4
+
+-!-21::0-?-?-Imprimo el primer elemento antes y despues de desencolar, verificando que disminuya la cantidad de elementos
+elementos de la cola: 
+5,2,3,-1
+
+-!-22::0-?-?-Clono e imprimo los elementos de la cola clonando y desencolando
+Largo de clon luego de vaciarlo: 0
+Largo de la cola original luego de vaciar clon: 4
+
+-!-23::0-?-?-Verifico que se modifique el clon y no el original
+El principio de la cola clon luego de agregar 3 elementos es: 38
+El principio de la cola clon luego de desencolar 2 elementos es: -16
+
+-!-24::0-?-?-Verifico que encolar y desencolar elementos no altere la estructura de la cola
+vacio el clon totalmente. Cantidad de elementos: 0
+Es vacia: 1
+
+-!-25::0-?-?-Verifico que funcione el caso base de desencolar dejando la cola vacia
+cantidad de elementos de la cola original luego de destruir clon: 4principio de la cola original luego de destruir clon5
+-!-26::0-?-?-Verifico que destruir el clon no altere la cola original
+elementos de la cola: 
+5,2,3,-1
+elementos del clon de la cola: 
+5,2,3,-1
+
+-!-27::0-?-?-Verifico que el clon copie todos los elementos de la cola
+
+-!-28::0-?-?-Libero memoria
+-!-Fin::PRUEBAS ColaInt
+-!-Ini::PRUEBAS TablaIntString
+Largo de la tabla: 5
+
+-!-29::0-?-?-Imprimio largo luego de agregar 5 elementos
+Largo del clon: 5
+
+-!-30::0-?-?-Imprimio largo del clon luego de clonar la tabla
+Elementos del dominio del Clon de la tabla: (1,2,3,4,5)
+
+-!-31::0-?-?-Clono e imprimo
+Largo de clon luego de vaciarlo: 0
+Largo de Tabla luego de vaciar clon: 5
+
+-!-32::0-?-?-Verifico que se modifique el clon y no el original
+Largo de la tabla luego de agregar dos elemento: 7
+
+-!-33::0-?-?-Verifico que se agregue los elementos a la tabla
+El 7  si  esta definido en la tabla
+
+-!-34::0-?-?-Verifico que el elemento 7 esta definido
+El elemento de dominio 7 le corresponde: char
+
+-!-35::0-?-?-Verifico que el elemento 7 tenga datos asociados
+El 7 no esta definido en la tabla
+
+-!-36::0-?-?-Verifico que el elemento 7 no esta definido
+Consigo un dominio cualquiera de la tabla: 1
+
+-!-37::0-?-?-Verifico que la tabla me devuelva un dominio cualquiera
+La tabla no es vacia
+
+-!-38::0-?-?-Verifico que la tabla no sea vacia
+
+-!-39::0-?-?-Libero memoria
+-!-Fin::PRUEBAS TablaIntString
+-!-Ini::PRUEBAS MultisetInt
+Largo de lista Pos: 8
+
+-!-40::0-?-?-Imprimo largo luego de agregar
+Clon de multiset: (-2,-1,4,5,5,7,7,15)
+
+-!-41::0-?-?-Clono e imprimo
+Largo de clon luego de vaciarlo: 0
+Largo de Set luego de vaciar clon: 8
+
+-!-42::0-?-?-Verifico que se modifique el clon y no el original
+Union de multiset: (-2,-1,1,2,2,2,4,4,5,5,7,7,13,15)
+
+-!-43::0-?-?-Hago union e imprimo
+Largo de la union: 14
+Largo de la union luego de vaciarlo: 0
+Largo de Multiset1 luego de vaciar la union: 8
+Largo de Multiset2 luego de vaciar la union: 11
+
+-!-44::0-?-?-Verifico que se modifique la union y no los originales
+Interseccion de multiset: (4,5,5,7,15)
+
+-!-45::0-?-?-Hago interseccion e imprimo
+Largo de la interseccion: 5
+Largo de la interseccion luego de vaciarlo: 0
+Largo de Multiset1 luego de vaciar la interseccion: 8
+Largo de Multiset2 luego de vaciar la interseccion: 11
+
+-!-46::0-?-?-Verifico que se modifique la interseccion y no los originales
+Diferencia de multiset: (-2,-1,7)
+
+-!-47::0-?-?-Hago diferencia e imprimo
+Largo de la diferencia: 3
+Largo de la diferencia luego de vaciarlo: 0
+Largo de Multiset1 luego de vaciar la diferencia: 8
+Largo de Multiset2 luego de vaciar la diferencia: 11
+
+-!-48::0-?-?-Verifico que se modifique la diferencia y no los originales
+Pertenece elemento: 1
+Pertenece elemento luego de borrarlo: 0
+Pertenece otro elemento: 0
+
+-!-49::0-?-?-Verifico si pertenecen algunos elementos
+Subconjunto: 0
+Subconjunto luego de borrar elementos: 0
+Subconjunto luego de borrar mas elementos: 1
+Es vacio: 1
+Cantidad elementos de vacio: 0
+Subconjunto vacio: 1
+
+-!-50::0-?-?-Verifico si a partir de un Multiset que no pertenece a otro, luego de borrarle algunos elementos, si pertenece
+Largo del multiset luego de borrar otro elemento: 5
+Multiset luego de haber borrado 2 elementos: (-2,4,5,7,7)
+
+-!-51::0-?-?-Borro algunos elementos
+
+-!-52::0-?-?-Libero memoria
+-!-Fin::PRUEBAS MultisetInt
+-!-Ini::PRUEBAS GrafoInt
+Es dirigido: 1
+#vertices: 6
+#aristas (inicio): 0
+
+-!-53::0-?-?-Creo grafo dirigido vacío
+#aristas tras agregar: 4
+Tiene 0->1: 1, peso: 5
+Tiene 0->2: 1, peso: 2
+Tiene 2->4: 1, peso: 7
+Tiene 5->0: 1, peso: 1
+
+-!-54::0-?-?-Agrego aristas e inspecciono existencia y peso
+Conexiones desde 0: 2
+Conexiones desde 2: 1
+Conexiones desde 3 (aislado): 0
+Conexiones desde 5: 1
+
+-!-55::0-?-?-Verifico grado de salida y vecinos
+Peso 0->1 actualizado: 8
+#aristas (sin duplicar por actualización): 4
+
+-!-56::0-?-?-Actualizar una arista no cambia la cantidad de aristas
+Tiene 1->5 (no existe): 0
+Peso 1->5 (inexistente): -1
+
+-!-57::0-?-?-Consultar arista inexistente (peso debería ser -1)
+Tras eliminar 0->2, tiene 0->2: 0
+#aristas: 3
+
+-!-58::0-?-?-Elimino una arista existente y re-chequeo vecinos
+Eliminar 0->2 nuevamente no cambia #aristas: 3
+
+-!-59::0-?-?-Eliminar una arista inexistente no debe afectar el grafo
+Tiene 3->3: 1, peso: 9
+Conexiones desde 3 (con bucle): 1
+
+-!-60::0-?-?-Agrego un bucle y verifico efectos en grado y vecinos
+#aristas (original): 4
+#aristas (clon): 4
+
+-!-61::0-?-?-Clono el grafo y comparo vecinos
+(clon) tiene 0->1: 0, (orig) tiene 0->1: 1
+(clon) #aristas: 4, (orig) #aristas: 4
+
+-!-62::0-?-?-Modifico el clon y verifico que el original no cambie (incluye vecinos)
+
+-!-63::0-?-?-Libero memoria
+Es dirigido: 0
+#vertices: 5
+#aristas (inicio): 0
+
+-!-64::0-?-?-Creo grafo no dirigido vacío
+#aristas tras agregar {0-1, 3-4}: 2
+Tiene 0-1: 1
+Peso 1->0 (de 0-1): 1
+
+-!-65::0-?-?-Agrego aristas y verifico simetría y vecinos en no dirigidos
+Peso actualizado 0-1: (0->1) 5, (1->0) 5
+#aristas se mantiene: 2
+
+-!-66::0-?-?-Actualizar peso no duplica aristas ni cambia vecinos
+Tiene 2-2: 1, peso: 0
+#aristas (con bucle): 3
+
+-!-67::0-?-?-Agrego bucle con peso 0 y verifico vecinos
+(clon) tiene 0-1: 0
+(orig) tiene 0-1: 1
+(clon) #aristas: 2, (orig) #aristas: 3
+
+-!-68::0-?-?-Eliminación en el clon no afecta al original (incluye vecinos)
+Tras eliminar 3-4, conexiones(3): 0, conexiones(4): 0
+#aristas: 2
+
+-!-69::0-?-?-Elimino arista en no dirigido y verifico grados, vecinos y conteo
+Eliminar 3-4 nuevamente no cambia #aristas: 2
+
+-!-70::0-?-?-Eliminar arista inexistente no cambia el grafo
+
+-!-71::0-?-?-Libero memoria
+-!-Fin::PRUEBAS GrafoInt
+-!-Ini::PRUEBAS EstaContenida
+Llamada: EstaContenida((1,7,4,2), (7,3,2,1))
+No esta contenida
+
+-!-72::0-?-?-Prueba de pila contenida 1
+Llamada: EstaContenida((1,7,4,2), (7,3,2,1,4,8))
+Esta contenida
+
+-!-73::0-?-?-Prueba de pila contenida 2
+Llamada: EstaContenida((1,7,4,2,7,4,4,7), (7,3,7,2,4,1,4,8))
+No esta contenida
+
+-!-74::0-?-?-Prueba de pila contenida 3
+Llamada: EstaContenida((1,7,4,2,7,4,4,7), (7,3,7,2,4,4,4,7,1,4,8))
+Esta contenida
+
+-!-75::0-?-?-Prueba de pila contenida 4
+-!-Fin::PRUEBAS EstaContenida
+-!-Ini::PRUEBAS EliminarMaximos
+Llamada: EliminarMaximos(())
+No hay elementos
+
+-!-76::0-?-?-Prueba eliminar maximos de cola 1
+Llamada: EliminarMaximos((1,4,9,-7,3))
+1 4 -7 3
+
+-!-77::0-?-?-Prueba eliminar maximos de cola 2
+Llamada: EliminarMaximos((5,9,3,9,2,9,1))
+5 3 2 1
+
+-!-78::0-?-?-Prueba eliminar maximos de cola 3
+Llamada: EliminarMaximos((7,7,7,7))
+No hay elementos
+
+-!-79::0-?-?-Prueba eliminar maximos de cola 4
+Llamada: EliminarMaximos((-5,-1,-3,-1,-7))
+-5 -3 -7
+
+-!-80::0-?-?-Prueba eliminar maximos de cola 5
+-!-Fin::PRUEBAS EliminarMaximos
+-!-Ini::PRUEBAS ObtenerRepetidos
+Llamada: ObtenerRepetidos((1,1,2))
+1
+
+-!-81::0-?-?-Prueba obtener repetidos multiset 1
+Llamada: ObtenerRepetidos(())
+No hay elementos
+
+-!-82::0-?-?-Prueba obtener repetidos multiset 2
+Llamada: ObtenerRepetidos((1,2,3,2,1))
+1 2
+
+-!-83::0-?-?-Prueba obtener repetidos multiset 3
+Llamada: ObtenerRepetidos((10,4,6,1,1,10,5,8))
+1 10
+
+-!-84::0-?-?-Prueba obtener repetidos multiset 4
+Llamada: ObtenerRepetidos((1,1,1,1,1,1))
+1
+
+-!-85::0-?-?-Prueba obtener repetidos multiset 5
+Llamada: ObtenerRepetidos((4,6,4,6,4,6,4,6))
+4 6
+
+-!-86::0-?-?-Prueba obtener repetidos multiset 6
+Llamada: ObtenerRepetidos((1,2,1,4,2,1,4,2,7))
+1 2 4
+
+-!-87::0-?-?-Prueba obtener repetidos multiset 7
+-!-Fin::PRUEBAS ObtenerRepetidos
+-!-Ini::PRUEBAS RestringirDominio
+Llamada: RestringirDominio((), (), ())
+No hay elementos
+
+-!-88::0-?-?-Prueba restringir dominio tabla 1
+Llamada: RestringirDominio((), (), (1,2))
+No hay elementos
+
+-!-89::0-?-?-Prueba restringir dominio tabla 2
+Llamada: RestringirDominio((1,2), ("a","b"), (1,2,3))
+1->a 2->b
+
+-!-90::0-?-?-Prueba restringir dominio tabla 3
+Llamada: RestringirDominio((1,2,3), ("a","b","c"), ())
+No hay elementos
+
+-!-91::0-?-?-Prueba restringir dominio tabla 4
+Llamada: RestringirDominio((1,2,3,4), ("a","b","c","d"), (2,4))
+2->b 4->d
+
+-!-92::0-?-?-Prueba restringir dominio tabla 5
+Llamada: RestringirDominio((-5,0,7), ("x","y","z"), (0,100))
+0->y
+
+-!-93::0-?-?-Prueba restringir dominio tabla 6
+Llamada: RestringirDominio((1,2,3), ("a","b","c"), (2,2,2))
+2->b
+
+-!-94::0-?-?-Prueba restringir dominio tabla 7
+-!-Fin::PRUEBAS RestringirDominio
+-!-Ini::PRUEBAS RecorridaDFS
+Llamada: RecorridaDFS((), (), (), 0, 0, 0)
+No hay elementos
+
+-!-95::0-?-?-Prueba recorrida DFS grafo 1
+Llamada: RecorridaDFS((), (), (), 1, 0, 0)
+0
+
+-!-96::0-?-?-Prueba recorrida DFS grafo 2
+Llamada: RecorridaDFS((0,1), (1,2), (1,1), 3, 0, 0)
+0 1 2
+
+-!-97::0-?-?-Prueba recorrida DFS grafo 3
+Llamada: RecorridaDFS((0,2), (1,3), (1,1), 4, 0, 0)
+0 1
+
+-!-98::0-?-?-Prueba recorrida DFS grafo 4
+Llamada: RecorridaDFS((0,1), (1,2), (1,1), 3, 1, 0)
+0 1 2
+
+-!-99::0-?-?-Prueba recorrida DFS grafo 5
+Llamada: RecorridaDFS((0), (1), (1), 3, 1, 1)
+1
+
+-!-100::0-?-?-Prueba recorrida DFS grafo 6
+Llamada: RecorridaDFS((0,1,2), (1,2,0), (1,1,1), 3, 1, 0)
+0 1 2
+
+-!-101::0-?-?-Prueba recorrida DFS grafo 7
+Llamada: RecorridaDFS((1), (2), (), 4, 1, 3)
+3
+
+-!-102::0-?-?-Prueba recorrida DFS grafo 8
+-!-Fin::PRUEBAS RecorridaDFS

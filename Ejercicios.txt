@@ -1,0 +1,87 @@
+EJERCICIOS A IMPLEMENTAR (TODOS SON OBLIGATORIOS)
+
+NOTA: No se tomaran en cuenta ejercicios que no ejecuten correctamente todas las pruebas que se entregan
+NOTA: Para poder ejecutar tienen que estar implementadas todas las operaciones del TAD (no puede estar a medias)
+NOTA: En los ejercicios NO se puede acceder a la representación del TAD ni modificar los parametros
+
+1)	Complete la implementacion PilaIntImp del TAD PilaInt especificado en el proyecto,
+	de forma que las operaciones para push, top, pop y cantidadElementos se realicen
+	en tiempo de ejecucion constante en el peor caso.
+	NOTA: La especificacion no es acotada.
+
+2)  Implemente la funcion EstaContenida que dadas dos pilas: p1 y p2, de tipo PilaInt
+    retorne true si y solo si todos los elementos de p1 se encuentran en p2.
+    Si hay valores repetidos en p1, entonces se tienen que encontrar como minimo
+    la misma cantidad de repetidos de ese valor en p2.
+    Las pilas parametro no deberan ser modificadas.
+    La pila vacia esta contenida en cualquier pila.
+    No se pueden usar TAD ni otras estructuras auxiliares aparte de PilaInt.
+
+    bool EstaContenida(PilaInt p1, PilaInt p2)
+
+3)  Complete la implementacion ColaIntImp del TAD ColaInt especificado en el proyecto,
+    de forma que las operaciones para encolar, principio, desencolar y cantidadElementos
+    se realicen en tiempo de ejecucion constante en el peor caso.
+    NOTA: La especificacion no es acotada.
+
+4)  Implemente el procedimiento EliminarMaximos que dada una cola c de tipo ColaInt
+    elimina de c todas las apariciones del valor máximo, preservando el orden
+    relativo del resto de los elementos.
+    No se pueden usar TAD ni otras estructuras auxiliares aparte de ColaInt.
+
+    void eliminarMaximos(ColaInt& c);
+
+5)  Complete la implementacion ListaPosIntImp del TAD ListaPosInt especificado en el proyecto,
+    de forma que las operaciones elemento y cantidadElementos se realicen en tiempo de ejecucion
+    constante en el peor caso.
+    NOTA: La especificacion no es acotada.
+
+6)  Complete la implementacion MultisetIntImp del TAD MultisetInt especificado en el proyecto,
+    de forma que las operaciones agregar, borrar, pertenece se realicen en tiempo de ejecucion
+    O(log2n) en promedio y cantidadElementos en O(1).
+    NOTA: La especificacion no es acotada.
+
+7)  Implemente la función ObtenerRepetidos que sado un multiset, retorna una ListaPosInt con los
+    elementos que aparecen mas de una vez en el multiset.
+    La lista resultado no debe incluir repetidos.
+    No se pueden usar TAD ni otras estructuras auxiliares aparte de MultisetInt y ListaPosInt.
+
+    ListaPosInt ObtenerRepetidos(MultisetInt m);
+
+8)  Complete la implementacion TablaIntStringImp del TAD TablaIntString especificado en el proyecto,
+    de forma que las operaciones estaDefinida y recuperar se realicen en tiempo de ejecucion O(1) promedio.
+    Usar hashing abierto, considerando a la operacion modulo adecuada como funcion de hash.
+    Al crear la tabla se recibe la cantidad esperada de elementos, aunque puedan insertarse mas elementos.
+    NOTA: La especificacion no es acotada.
+
+9)  Implemente la funcion RestringirDominio que dada una tabla t del tipo TablaIntString y un
+    diccionario de enteros permitidos del tipo DiccionarioInt, elimine de t todas las
+    asociaciones cuya clave no pertenezca a 'permitidos'.
+    El diccionario parametro no debe ser modificado.
+
+    void RestringirDominio(TablaIntString& t, MultisetInt permitidos);
+
+10) Complete la implementacion GrafoIntLista del TAD GrafoInt especificado en el proyecto
+    usando listas de adyacencia.
+    Al crear el grafo se recibe la cantidad de vértices.
+    NOTA: La especificacion es acotada.
+    NOTA: Para poder usar GrafoIntLista hay que modificar el archivo "Implementaciones.h"
+
+11) Complete la implementacion GrafoIntMatriz del TAD GrafoInt especificado en el proyecto
+    usando matrices de adyacencia.
+    Al crear el grafo se recibe la cantidad de vértices.
+    NOTA: La especificacion es acotada.
+    NOTA: Para poder usar GrafoIntMatriz hay que modificar el archivo "Implementaciones.h"
+
+12) Implemente una funcion RecorridaDFS que dado un grafo y un vértice de origen, retorne una cola
+    con los vértices del grafo alcanzados desde el vértice de orígen, utilizando la estrategia DFS.
+    El grafo no debe ser modificado.
+    NOTA: Pruebe el funcionamiento de la función con ambas implementaciones de GrafoInt
+    
+    ColaInt RecorridaDFS(GrafoInt grafo, int origen);
+
+COMENTARIOS GENERALES:
+NOTA: Cada archivo .cpp debe definir sus propios structs.
+NOTA: Las funciones auxiliares deben tener pre y pos en el .cpp.
+NOTA: No se pueden modificar los .h ni ningún otro archivo
+NOTA: Los casos de prueba no son exhaustivos. Es recomendable pensar en casos que no cubren las pruebas y elaborar pruebas propias para complementar. Las pruebas propias se agregan en el archivo PruebasPropias.cpp

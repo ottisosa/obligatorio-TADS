@@ -1,0 +1,68 @@
+-!-Ini::PRUEBAS PilaInt
+cantidad de elementos al crear la pila: 0
+Esta vacia: 1
+
+-!-0::0-?-?-Imprimo la cantidad de elementos al crear la pila y valido que sea vacia
+tope de la pila cuando agrego el primer elemento: 4
+
+-!-1::0-?-?-Imprimo el tope de la pila con 1 elemento para validar el caso base de push
+Esta vacia: 0
+
+-!-2::0-?-?-Imprimo si esta vacia o llena antes y despues de agregar, verificando que push funcione
+Largo de pila: 5
+
+-!-3::0-?-?-Imprimo largo luego de agregar
+el primer elemento antes del pop es: -1
+el primer elemento luego del pop es: 3
+la cantidad de elementos luego del pop es: 4
+
+-!-4::0-?-?-Imprimo el primer elemento antes y despues del pop, verificando que disminuya la cantidad de elementos
+elementos de la pila: 
+3,2,5,4
+
+-!-5::0-?-?-Clono e imprimo los elementos de la pila clonando y poppeando
+Largo de clon luego de vaciarlo: 0
+Largo de la pila original luego de vaciar clon: 4
+
+-!-6::0-?-?-Verifico que se modifique el clon y no el original
+El tope de la pila clon luego de agregar 3 elementos es: -16
+El tope de la pila clon luego de poppear 2 elementos es: 38
+
+-!-7::0-?-?-Verifico que pushear y poppear elementos no altere la estructura de la pila
+vacio el clon totalmente. Cantidad de elementos: 0
+Es vacia: 1
+
+-!-8::0-?-?-Verifico que funcione el caso base de pop dejando la pila vacia
+cantidad de elementos de la pila original luego de destruir clon: 4tope de la pila original luego de destruir clon3
+-!-9::0-?-?-Verifico que destruir el clon no altere la pila original
+elementos de la pila: 
+3,2,5,4
+elementos del clon de la pila: 
+3,2,5,4
+
+-!-10::0-?-?-Verifico que el clon copie todos los elementos de la pila
+
+-!-11::0-?-?-Libero memoria
+-!-Fin::PRUEBAS PilaInt
+-!-Ini::PRUEBAS ListaPosInt
+Largo de lista Pos: 0
+
+-!-12::0-?-?-Imprimo largo luego de agregar
+
+-!-13::0-?-?-Clono e imprimo
+Cantidad de elementos del clon luego de vaciarlo: 0
+Cantidad de elementos de la cola luego de vaciar clon: 0
+
+-!-14::0-?-?-Verifico que se modifique el clon y no el original
+Largo de lista Pos luego de borrar 4 elementos: 0
+Largo de lista Pos luego de vaciarla: 0
+
+-!-15::0-?-?-Borro algunos elementos y vacio la lista
+
+-!-16::0-?-?-Libero memoria
+-!-Fin::PRUEBAS ListaPosInt
+-!-Ini::PRUEBAS ColaInt
+cantidad de elementos al crear la cola: 0
+Esta vacia: 1
+
+-!-17::0-?-?-Imprimo la cantidad de elementos al crear la cola y valido que sea vacia
