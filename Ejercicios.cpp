@@ -7,6 +7,9 @@ bool EstaContenida(PilaInt p1, PilaInt p2){
 
     if (esVacia(pila1))
     {
+        destruir(pila1);
+        destruir(pila2);
+
         return true;
     }
         
@@ -46,6 +49,8 @@ bool EstaContenida(PilaInt p1, PilaInt p2){
 
         if (!esta)
         {
+            destruir(pila1);
+            destruir(pila2);
             return false;
         }
 
@@ -53,6 +58,9 @@ bool EstaContenida(PilaInt p1, PilaInt p2){
         pop(pila1);
      
     }
+
+    destruir(pila1);
+    destruir(pila2);
 
     return true;
 }

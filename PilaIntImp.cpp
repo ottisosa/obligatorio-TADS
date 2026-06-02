@@ -92,7 +92,13 @@ PilaInt clon(PilaInt p) {
 		pop(aux);
 	}
 
-	destruir(aux);
+
+	while (!esVacia(aux))
+	{
+		pop(aux);
+	}
+
+	delete aux;
 
 	return ret;
 }

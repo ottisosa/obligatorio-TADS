@@ -31,21 +31,21 @@ ColaInt crearColaInt() {
 
 void encolar(ColaInt& c, int e) {
 
-	if (c->inicio == NULL)
+	if (c->fin == NULL)
 	{
-		c->inicio = new NodoLista;
-		c->inicio->dato = e;
-		c->inicio->sig = NULL;
-		c->fin = c->inicio;
+		c->fin = new NodoLista;
+		c->fin->dato = e;
+		c->fin->sig = NULL;
+		c->inicio = c->fin;
 		c->largo++;
 	}
 	else {
 	
 	
-		c->inicio->sig = new NodoLista;
-		c->inicio = c->inicio->sig;
-		c->inicio->dato = e;
-		c->inicio->sig = NULL;
+		c->fin->sig = new NodoLista;
+		c->fin = c->fin->sig;
+		c->fin->dato = e;
+		c->fin->sig = NULL;
 		c->largo++;
 	
 
@@ -56,22 +56,22 @@ void encolar(ColaInt& c, int e) {
 
 int principio(ColaInt c) {
 	
-	return c->fin->dato;
+	return c->inicio->dato;
 }
 
 void desencolar(ColaInt& c) {
 
 
 	
-		 NodoLista* aux = c->fin;
-		 c->fin = c->fin->sig;
+		 NodoLista* aux = c->inicio;
+		 c->inicio = c->inicio->sig;
 		 c->largo--;
 		 delete aux;
 
 
-		 if (c->fin == NULL)
+		 if (c->inicio == NULL)
 		 {
-			 c->inicio = NULL;
+			 c->fin = NULL;
 		 }
 
 
@@ -80,7 +80,7 @@ void desencolar(ColaInt& c) {
 
 bool esVacia(ColaInt c) {
 
-	if (c->inicio == NULL && c->fin == NULL)
+	if (c->inicio == NULL)
 	{
 		return true;
 	}
@@ -96,8 +96,33 @@ unsigned int cantidadElementos(ColaInt c) {
 }
 
 ColaInt clon(ColaInt c) {
-	// NO IMPLEMENTADO
-	return NULL;
+
+	//ColaInt ret = crearColaInt();
+	//
+	//	if (!esVacia(c))
+	//	{
+
+	//		ColaInt aux = c;
+	//		ColaInt aux2 = crearColaInt();
+
+	//		while (cantidadElementos(aux) != 0)
+	//		{
+	//			encolar(aux2, principio(aux));
+
+	//			desencolar(aux);
+	//		}
+
+
+	//		while (cantidadElementos(aux2) != 0 )
+	//		{
+	//			
+	//			encolar(ret, principio(aux2));
+	//			desencolar(aux2);
+
+	//		}
+	//	}
+
+	//	return ret;
 }
 
 void destruir(ColaInt& c) {
