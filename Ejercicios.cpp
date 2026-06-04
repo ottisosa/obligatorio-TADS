@@ -67,7 +67,45 @@ bool EstaContenida(PilaInt p1, PilaInt p2){
 
 
 void EliminarMaximos(ColaInt& c){
-    //IMPLEMENTAR SOLUCION
+
+    if (!esVacia(c))
+    {
+
+        ColaInt aux = crearColaInt();
+        int maximo = principio(c);
+        
+        while (!esVacia(c))
+        {
+            encolar(aux, principio(c));
+
+            if (principio(c) > maximo)
+            {
+                maximo = principio(c);
+            }
+
+            desencolar(c);
+        }
+
+
+        while (!esVacia(aux))
+        {
+
+            if (principio(aux) == maximo)
+            {
+                desencolar(aux);
+            }
+            else {
+            
+                encolar(c, principio(aux));
+
+                desencolar(aux);
+            }
+
+        }
+
+        destruir(aux);
+
+    }
 }
 
 ListaPosInt ObtenerRepetidos(MultisetInt m){
