@@ -4,56 +4,281 @@
 
 //Si necestita otra estructura se puede definir aqui
 
-struct _representacionTablaIntString {
-	// NO IMPLEMENTADO
+
+struct Nodo {
+
+	int clave;
+	char* valor;
+	Nodo* sig;
+
 };
 
-TablaIntString crearTablaIntString(unsigned int esperados) {
-	// NO IMPLEMENTADO
-	return NULL;
+struct _representacionTablaIntString {
+
+	Nodo** hash;
+	int cota;
+	int cantElem;
+};
+
+
+//PRE: la cota debe ser mayor a 0
+//POS: retorna una poscicion entre 0 y cota -1 donde se buscan o se insertan elementos claves de k
+
+int h(int k, int cota){
+
+	return abs(k) % cota;
 }
 
+TablaIntString crearTablaIntString(unsigned int esperados) {
+
+
+	TablaIntString nuevo = new _representacionTablaIntString;
+	nuevo->cota = esperados;
+	nuevo->cantElem = 0;
+	nuevo->hash = new Nodo*[nuevo->cota];
+	
+	for (int i = 0; i < nuevo->cota; i++)
+	{
+		nuevo->hash[i] = NULL;
+	}
+
+	return nuevo;
+}
+
+//PRE: -
+//POS: retorna el largo de un string
+
+int largoPalabra(const char * r) {
+
+	int largo = 0;
+	while (r[largo] != '\0')
+	{
+		largo++;
+	}
+
+	return largo;
+}
+
+//PRE: -
+//POS: copia la palabra de el origen al destino
+
+void copiarPalabra(const char* origen,  char* destino) {
+
+	int i = 0;
+
+	while (origen[i] != '\0')
+	{
+		destino[i] = origen[i];
+		i++;
+	}
+	destino[i] = '\0';
+}
 
 void agregar(TablaIntString& t, int d, const char* r) {
-	// NO IMPLEMENTADO
+
+	    int indice = h(d,t->cota);
+
+		Nodo* actual = t->hash[indice];
+		bool esta = false;
+
+	
+		while (actual != NULL && !esta)
+		{
+
+			if (actual->clave == d)
+			{
+
+				delete[] actual->valor;
+
+				int largo = largoPalabra(r);
+				actual->valor = new char[largo +1];
+				copiarPalabra(r, actual->valor);
+				esta = true;
+			}
+			actual = actual->sig;
+
+		}
+		if (!esta)
+		{
+			Nodo* nuevo = new Nodo;
+			nuevo->clave = d;
+
+
+			int largo = largoPalabra(r);
+			nuevo->valor = new char[largo + 1];
+			copiarPalabra(r, nuevo->valor);
+
+			nuevo->sig = t->hash[indice];
+			t->hash[indice] = nuevo;
+			t->cantElem++;
+		}
+
+
+
 }
 
 bool estaDefinida(TablaIntString t, int d) {
-	// NO IMPLEMENTADO
-    return false;
+
+	if (t!= NULL)
+	{
+
+	
+		int indice = h(d, t->cota);
+		Nodo* actual = t->hash[indice];
+		while (actual != NULL)
+		{
+			if (actual->clave == d)
+			{
+				return true;
+
+			}
+
+			actual = actual->sig;
+		}
+
+	}
+	return false;
 }
 
 const char* recuperar(TablaIntString t, int d) {
-	// NO IMPLEMENTADO
-	return "";
+
+	int indice = h(d, t->cota);
+	Nodo* nodo = t->hash[indice];
+
+	while (nodo != NULL) // Por la tabla de hash aun asi es O(1)
+	{
+		if (nodo->clave  == d)
+		{
+			return nodo->valor;
+		}
+		nodo = nodo->sig;
+	}
+	return NULL;
 }
 
 void borrar(TablaIntString& t, int d) {
-	// NO IMPLEMENTADO
+	
+	if (t != NULL)
+	{
+
+	
+		int indice = h(d, t->cota);
+		Nodo* nodo = t->hash[indice];
+		Nodo* ant = NULL;
+		while (nodo != NULL && nodo->clave != d)
+		{
+			  ant = nodo;
+			  nodo = nodo->sig;
+		}
+
+		if (nodo != NULL)
+		{
+			if (ant == NULL)
+			{
+				t->hash[indice] = nodo->sig;
+
+			}
+			else {
+
+				ant->sig = nodo->sig;
+			}
+
+		
+		
+
+			delete[] nodo->valor;
+
+			delete nodo;
+
+			t->cantElem--;
+
+		}
+	}
 }
 
 int elemento(TablaIntString t) {
-	// NO IMPLEMENTADO
-	return 0;
+
+
+	for (int i = 0; i < t->cota; i++)
+	{
+		if (t->hash[i] != NULL)
+		{
+			return t->hash[i]->clave;
+		}
+
+	}
 }
 
 bool esVacia(TablaIntString t) {
-	// NO IMPLEMENTADO
-	return true;
+
+	if (t == NULL || t->hash == NULL)
+	{
+		return true;
+	}
+	return t->cantElem == 0;
 }
 
 unsigned int cantidadElementos(TablaIntString t) {
-	// NO IMPLEMENTADO
-	return 0;
+	
+	if (t == NULL)
+	{
+		return 0;
+	}
+	return t->cantElem;
 }
 
 void destruir(TablaIntString& t) {
-	// NO IMPLEMENTADO
+
+	if (t != NULL)
+	{
+
+		for (int i = 0; i < t->cota; i++)
+		{
+			Nodo* nodo = t->hash[i];
+
+			while (nodo != NULL)
+			{
+				Nodo* aux = nodo;
+				nodo = nodo->sig;
+
+				delete [] aux->valor;
+				delete aux;
+			}
+
+		}
+
+		delete[] t->hash;
+		delete t;
+
+		t = NULL;
+
+	}
 }
 
 TablaIntString clon(TablaIntString t) {
-	// NO IMPLEMENTADO
-	return NULL;
+
+	TablaIntString ret = crearTablaIntString(t->cota);
+
+	if (t->hash != NULL)
+	{
+
+	
+		for (int i = 0; i < t->cota; i++)
+		{
+          
+			Nodo* aux = t->hash[i];
+
+			while (aux != NULL)
+			{
+				agregar(ret, aux->clave, aux->valor);
+				aux = aux->sig;
+			}
+
+		}
+		
+	}
+	return ret;
+
 }
 
 #endif

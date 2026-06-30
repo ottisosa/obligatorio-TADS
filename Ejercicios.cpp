@@ -49,12 +49,13 @@ bool EstaContenida(PilaInt p1, PilaInt p2){
 
         if (!esta)
         {
+            destruir(aux);
             destruir(pila1);
             destruir(pila2);
             return false;
         }
 
-
+        destruir(aux);
         pop(pila1);
      
     }
@@ -109,8 +110,26 @@ void EliminarMaximos(ColaInt& c){
 }
 
 ListaPosInt ObtenerRepetidos(MultisetInt m){
-    //IMPLEMENTAR SOLUCION
-    return NULL;
+
+   ListaPosInt ret = crearListaPosInt();
+   MultisetInt copia = clon(m); // creo una copia para no modificar m
+   while (!esVacio(copia))
+   {
+       int elem = elemento(copia);
+       borrar(copia, elem);
+       if (pertenece(copia, elem))
+       {
+           int pos = 0;
+           agregar(ret,elem, pos);
+           pos++;
+
+           while (pertenece(copia,elem))
+           {
+               borrar(copia, elem);
+           }
+       }
+   }
+   return ret;
 }
 
 void RestringirDominio(TablaIntString& t, MultisetInt permitidos){

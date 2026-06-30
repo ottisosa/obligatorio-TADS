@@ -103,18 +103,54 @@ bool esVacia(ListaPosInt l)
 
 unsigned int cantidadElementos(ListaPosInt l)
 {
-	return l->cantElem;
+	if (l != NULL)
+	{
+
+		return l->cantElem;
+	}
+	else
+	{
+		return 0;
+	}
+
 }
 
 ListaPosInt clon(ListaPosInt l)
 {
-	//IMPLEMENTAR SOLUCION
-	return NULL;
+	if (l != NULL)
+	{
+
+	
+		ListaPosInt ret = new _representacionListaPosInt;
+		ret->cantElem = l->cantElem;
+		ret->capacidad = l->capacidad;
+
+		ret->datos = new int[ret->capacidad];
+
+		for (int i = 0; i < ret->capacidad; i++)
+		{
+			ret->datos[i] = l->datos[i];
+		}
+
+		return ret;
+	}
+	else
+	{
+		return NULL;
+	}
+
 }
 
 void destruir(ListaPosInt& l)
 {
-	//IMPLEMENTAR SOLUCION
+
+	if (l != NULL)
+	{
+
+		delete[] l->datos;
+		delete l;
+		l = NULL;
+	}
 }
 
 

@@ -52,7 +52,7 @@ void pruebasTablaIntStringNoAcotada(Prueba* pruebaConcreta) {
 
 	agregar(tabla, 23, "loop");
 
-	cout << "Largo de la tabla luego de agregar dos elemento :" << cantidadElementos(tabla)<<endl;
+	cout << "Largo de la tabla luego de agregar dos elemento: " << cantidadElementos(tabla)<<endl;
 	pruebaConcreta->ver3("Verifico que se agregue los elementos a la tabla");
 
 
@@ -62,24 +62,24 @@ void pruebasTablaIntStringNoAcotada(Prueba* pruebaConcreta) {
 	pruebaConcreta->ver3("Verifico que el elemento 7 esta definido");
 
 	const char* elementoRecuperado = recuperar(tabla, 7);
-	cout << "El elemento  de dominio 7 le corresponde : " << elementoRecuperado << endl;
+	cout << "El elemento de dominio 7 le corresponde: " << elementoRecuperado << endl;
 	pruebaConcreta->ver3("Verifico que el elemento 7 tenga datos asociados");
 
 	borrar(tabla, 7);
 	estaDefinidoElemento = estaDefinida(tabla, 7) ? " si " : " no ";
 
-	cout << "El 7 " << estaDefinidoElemento << " esta definido en la tabla" << endl;
+	cout << "El 7" << estaDefinidoElemento << "esta definido en la tabla" << endl;
 	pruebaConcreta->ver3("Verifico que el elemento 7 no esta definido");
 
 	TablaIntString tabla2 = crearTablaIntString(5);
 	agregar(tabla2, 1, "hello");
 	int elem = elemento(tabla2);
-	cout << "Consigo un dominio cualquiera de la tabla : " << elem << endl;
+	cout << "Consigo un dominio cualquiera de la tabla: " << elem << endl;
 	destruir(tabla2);
 	pruebaConcreta->ver3("Verifico que la tabla me devuelva un dominio cualquiera");
 
 	string vacia = esVacia(tabla) ? " si " : " no ";
-	cout << "La tabla " << vacia << " es vacia" << endl;
+	cout << "La tabla" << vacia << "es vacia" << endl;
 	pruebaConcreta->ver3("Verifico que la tabla no sea vacia");
 
 	destruir(tabla);

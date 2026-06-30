@@ -45,16 +45,17 @@ elementos del clon de la pila:
 -!-11::0-?-?-Libero memoria
 -!-Fin::PRUEBAS PilaInt
 -!-Ini::PRUEBAS ListaPosInt
-Largo de lista Pos: 0
+Largo de lista Pos: 7
 
 -!-12::0-?-?-Imprimo largo luego de agregar
+5,7,-1,-2,5,4,15
 
 -!-13::0-?-?-Clono e imprimo
 Cantidad de elementos del clon luego de vaciarlo: 0
-Cantidad de elementos de la cola luego de vaciar clon: 0
+Cantidad de elementos de la cola luego de vaciar clon: 7
 
 -!-14::0-?-?-Verifico que se modifique el clon y no el original
-Largo de lista Pos luego de borrar 4 elementos: 0
+Largo de lista Pos luego de borrar 4 elementos: 3
 Largo de lista Pos luego de vaciarla: 0
 
 -!-15::0-?-?-Borro algunos elementos y vacio la lista
@@ -108,93 +109,93 @@ elementos del clon de la cola:
 -!-28::0-?-?-Libero memoria
 -!-Fin::PRUEBAS ColaInt
 -!-Ini::PRUEBAS TablaIntString
-Largo de la tabla: 0
+Largo de la tabla: 5
 
 -!-29::0-?-?-Imprimio largo luego de agregar 5 elementos
-Largo del clon: 0
+Largo del clon: 5
 
 -!-30::0-?-?-Imprimio largo del clon luego de clonar la tabla
-Elementos del dominio del Clon de la tabla: ()
+Elementos del dominio del Clon de la tabla: (1,2,3,4,5)
 
 -!-31::0-?-?-Clono e imprimo
 Largo de clon luego de vaciarlo: 0
-Largo de Tabla luego de vaciar clon: 0
+Largo de Tabla luego de vaciar clon: 5
 
 -!-32::0-?-?-Verifico que se modifique el clon y no el original
-Largo de la tabla luego de agregar dos elemento :0
+Largo de la tabla luego de agregar dos elemento: 7
 
 -!-33::0-?-?-Verifico que se agregue los elementos a la tabla
-El 7  no  esta definido en la tabla
+El 7  si  esta definido en la tabla
 
 -!-34::0-?-?-Verifico que el elemento 7 esta definido
-El elemento  de dominio 7 le corresponde : 
+El elemento de dominio 7 le corresponde: char
 
 -!-35::0-?-?-Verifico que el elemento 7 tenga datos asociados
-El 7  no  esta definido en la tabla
+El 7 no esta definido en la tabla
 
 -!-36::0-?-?-Verifico que el elemento 7 no esta definido
-Consigo un dominio cualquiera de la tabla : 0
+Consigo un dominio cualquiera de la tabla: 1
 
 -!-37::0-?-?-Verifico que la tabla me devuelva un dominio cualquiera
-La tabla  si  es vacia
+La tabla no es vacia
 
 -!-38::0-?-?-Verifico que la tabla no sea vacia
 
 -!-39::0-?-?-Libero memoria
 -!-Fin::PRUEBAS TablaIntString
 -!-Ini::PRUEBAS MultisetInt
-Largo de lista Pos: 0
+Largo de lista Pos: 8
 
 -!-40::0-?-?-Imprimo largo luego de agregar
-Clon de multiset: ()
+Clon de multiset: (-2,-1,4,5,5,7,7,15)
 
 -!-41::0-?-?-Clono e imprimo
 Largo de clon luego de vaciarlo: 0
-Largo de Set luego de vaciar clon: 0
+Largo de Set luego de vaciar clon: 8
 
 -!-42::0-?-?-Verifico que se modifique el clon y no el original
-Union de multiset: ()
+Union de multiset: (-2,-1,1,2,2,2,4,4,5,5,7,7,13,15)
 
 -!-43::0-?-?-Hago union e imprimo
-Largo de la union: 0
+Largo de la union: 14
 Largo de la union luego de vaciarlo: 0
-Largo de Multiset1 luego de vaciar la union: 0
-Largo de Multiset2 luego de vaciar la union: 0
+Largo de Multiset1 luego de vaciar la union: 8
+Largo de Multiset2 luego de vaciar la union: 11
 
 -!-44::0-?-?-Verifico que se modifique la union y no los originales
-Interseccion de multiset: ()
+Interseccion de multiset: (4,5,5,7,15)
 
 -!-45::0-?-?-Hago interseccion e imprimo
-Largo de la interseccion: 0
+Largo de la interseccion: 5
 Largo de la interseccion luego de vaciarlo: 0
-Largo de Multiset1 luego de vaciar la interseccion: 0
-Largo de Multiset2 luego de vaciar la interseccion: 0
+Largo de Multiset1 luego de vaciar la interseccion: 8
+Largo de Multiset2 luego de vaciar la interseccion: 11
 
 -!-46::0-?-?-Verifico que se modifique la interseccion y no los originales
-Diferencia de multiset: ()
+Diferencia de multiset: (-2,-1,7)
 
 -!-47::0-?-?-Hago diferencia e imprimo
-Largo de la diferencia: 0
+Largo de la diferencia: 3
 Largo de la diferencia luego de vaciarlo: 0
-Largo de Multiset1 luego de vaciar la diferencia: 0
-Largo de Multiset2 luego de vaciar la diferencia: 0
+Largo de Multiset1 luego de vaciar la diferencia: 8
+Largo de Multiset2 luego de vaciar la diferencia: 11
 
 -!-48::0-?-?-Verifico que se modifique la diferencia y no los originales
-Pertenece elemento: 0
+Pertenece elemento: 1
 Pertenece elemento luego de borrarlo: 0
 Pertenece otro elemento: 0
 
 -!-49::0-?-?-Verifico si pertenecen algunos elementos
 Subconjunto: 0
 Subconjunto luego de borrar elementos: 0
-Subconjunto luego de borrar mas elementos: 0
+Subconjunto luego de borrar mas elementos: 1
 Es vacio: 1
 Cantidad elementos de vacio: 0
-Subconjunto vacio: 0
+Subconjunto vacio: 1
 
 -!-50::0-?-?-Verifico si a partir de un Multiset que no pertenece a otro, luego de borrarle algunos elementos, si pertenece
-Largo del multiset luego de borrar otro elemento: 0
-Multiset luego de haber borrado 2 elementos: ()
+Largo del multiset luego de borrar otro elemento: 5
+Multiset luego de haber borrado 2 elementos: (-2,4,5,7,7)
 
 -!-51::0-?-?-Borro algunos elementos
 
@@ -323,61 +324,61 @@ Llamada: EliminarMaximos((-5,-1,-3,-1,-7))
 -!-Fin::PRUEBAS EliminarMaximos
 -!-Ini::PRUEBAS ObtenerRepetidos
 Llamada: ObtenerRepetidos((1,1,2))
-NULL
+1
 
 -!-81::0-?-?-Prueba obtener repetidos multiset 1
 Llamada: ObtenerRepetidos(())
-NULL
+No hay elementos
 
 -!-82::0-?-?-Prueba obtener repetidos multiset 2
 Llamada: ObtenerRepetidos((1,2,3,2,1))
-NULL
+1 2
 
 -!-83::0-?-?-Prueba obtener repetidos multiset 3
 Llamada: ObtenerRepetidos((10,4,6,1,1,10,5,8))
-NULL
+1 10
 
 -!-84::0-?-?-Prueba obtener repetidos multiset 4
 Llamada: ObtenerRepetidos((1,1,1,1,1,1))
-NULL
+1
 
 -!-85::0-?-?-Prueba obtener repetidos multiset 5
 Llamada: ObtenerRepetidos((4,6,4,6,4,6,4,6))
-NULL
+4 6
 
 -!-86::0-?-?-Prueba obtener repetidos multiset 6
 Llamada: ObtenerRepetidos((1,2,1,4,2,1,4,2,7))
-NULL
+1 2 4
 
 -!-87::0-?-?-Prueba obtener repetidos multiset 7
 -!-Fin::PRUEBAS ObtenerRepetidos
 -!-Ini::PRUEBAS RestringirDominio
 Llamada: RestringirDominio((), (), ())
-NULL
+No hay elementos
 
 -!-88::0-?-?-Prueba restringir dominio tabla 1
 Llamada: RestringirDominio((), (), (1,2))
-NULL
+No hay elementos
 
 -!-89::0-?-?-Prueba restringir dominio tabla 2
 Llamada: RestringirDominio((1,2), ("a","b"), (1,2,3))
-NULL
+1->a 2->b
 
 -!-90::0-?-?-Prueba restringir dominio tabla 3
 Llamada: RestringirDominio((1,2,3), ("a","b","c"), ())
-NULL
+1->a 2->b 3->c
 
 -!-91::0-?-?-Prueba restringir dominio tabla 4
 Llamada: RestringirDominio((1,2,3,4), ("a","b","c","d"), (2,4))
-NULL
+1->a 2->b 3->c 4->d
 
 -!-92::0-?-?-Prueba restringir dominio tabla 5
 Llamada: RestringirDominio((-5,0,7), ("x","y","z"), (0,100))
-NULL
+-5->x 0->y 7->z
 
 -!-93::0-?-?-Prueba restringir dominio tabla 6
 Llamada: RestringirDominio((1,2,3), ("a","b","c"), (2,2,2))
-NULL
+1->a 2->b 3->c
 
 -!-94::0-?-?-Prueba restringir dominio tabla 7
 -!-Fin::PRUEBAS RestringirDominio
