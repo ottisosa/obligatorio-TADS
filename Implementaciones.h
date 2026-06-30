@@ -1,8 +1,8 @@
 #pragma once
 
 // Elegir la implementacion a usar de GrafoInt (solo 1 descomentada a la vez):
-#define GRAFO_INT_LISTA         // Implementación como Listas de Adyacencia
-//#define GRAFO_INT_MATRIZ      // Implementación como Matríz de Adyacencia
+//#define GRAFO_INT_LISTA         // Implementación como Listas de Adyacencia
+#define GRAFO_INT_MATRIZ      // Implementación como Matríz de Adyacencia
 
 // No modificar de aca en adelante
 #if defined(GRAFO_INT_LISTA)

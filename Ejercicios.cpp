@@ -133,10 +133,86 @@ ListaPosInt ObtenerRepetidos(MultisetInt m){
 }
 
 void RestringirDominio(TablaIntString& t, MultisetInt permitidos){
-    //IMPLEMENTAR SOLUCION
-}
 
+    if (t != NULL)
+    {
+        TablaIntString aux = crearTablaIntString(cantidadElementos(t));
+
+        while (!esVacia(t))
+        {
+            if (pertenece(permitidos,elemento(t)))
+            {
+                agregar(aux,elemento(t), recuperar(t,elemento(t)));
+            }
+            borrar(t, elemento(t));
+
+        }
+
+        destruir(t);
+
+        t = aux;
+    }
+
+}
 ColaInt RecorridaDFS(GrafoInt grafo, int origen){
-    //IMPLEMENTAR SOLUCION
-    return NULL;
+
+    ColaInt ret = crearColaInt();
+    int n = cantidadVertices(grafo);
+
+    bool* conocidos = new bool[n];
+
+    for (int i = 0; i < n; i++)
+    {
+
+        conocidos[i] = false;
+
+    }
+
+
+    PilaInt stack = crearPilaInt();
+    push(stack, origen);
+
+
+
+    while (!esVacia(stack))
+    {
+        int valor = top(stack);
+        pop(stack);
+    
+        if (valor >=0 && valor < n && !conocidos[valor])
+        {
+            conocidos[valor] = true;
+            encolar(ret, valor);
+
+
+            int cant = cantidadConexiones(grafo, valor);
+            int* vecinosAct = vecinos(grafo, valor);
+        
+
+            for (int i = cant - 1; i >= 0 ; i--)
+            {
+                int vec = vecinosAct[i];
+
+                if (!conocidos[vec])
+                {
+                    push(stack,vec);
+
+                }
+
+            }
+            if (vecinosAct != NULL)
+            {
+
+
+                delete[] vecinosAct;
+            }
+        }
+    
+    }
+
+    destruir(stack);
+    delete[] conocidos;
+
+
+    return ret;
 }

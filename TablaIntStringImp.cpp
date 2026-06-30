@@ -125,7 +125,7 @@ bool estaDefinida(TablaIntString t, int d) {
 	
 		int indice = h(d, t->cota);
 		Nodo* actual = t->hash[indice];
-		while (actual != NULL)
+		while (actual != NULL) // O(1) promedio por la funcion de dispersion
 		{
 			if (actual->clave == d)
 			{
@@ -145,7 +145,7 @@ const char* recuperar(TablaIntString t, int d) {
 	int indice = h(d, t->cota);
 	Nodo* nodo = t->hash[indice];
 
-	while (nodo != NULL) // Por la tabla de hash aun asi es O(1)
+	while (nodo != NULL) // O(1) promedio por la funcion de dispersion
 	{
 		if (nodo->clave  == d)
 		{
